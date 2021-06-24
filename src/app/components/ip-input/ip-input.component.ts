@@ -26,6 +26,10 @@ export class IpInputComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clearInput() {
+    this.isValid = true;
+  }
+
   validateData() {
     this.setSearchType();
     if(this.searchType != "invalid") {

@@ -1,0 +1,18 @@
+.ip-input {
+    &__input {
+        &--error {
+            border: 1px solid rgb(172, 32, 32);
+            color: rgb(172, 32, 32);
+        }
+    }
+
+    &__alert {
+        text-align: center;
+        margin: 0;
+
+        &--error {
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+    }
+}

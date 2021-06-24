@@ -1,12 +1,15 @@
 <div class="input-group">
     <input
+        [ngClass]="{'ip-input__input--error' : !isValid}"
+        class="ip-input__input"
         type="text"
         [placeholder]="placeholder"
         value=""
         [(ngModel)]="searchItem"
+        (focus)="clearInput()"
     />
     <button type="button"(click)="validateData()">
         <img src="/assets/img/icon-arrow.svg" />
     </button>
 </div>
-<p *ngIf="!isValid">Invalid IP Address or Domain. Please make sure it's right</p>
+<p class="ip-input__alert ip-input__alert--error" *ngIf="!isValid">Invalid IP Address or Domain. Please make sure it's right</p>
