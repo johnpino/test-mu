@@ -1,0 +1,8 @@
+<input 
+    type="text" 
+    value="" 
+    [(ngModel)]="searchItem"
+    />
+<button type="button" (click)="validateData()">Testing</button>
+<h2>{{ searchItem }}</h2>
+<p *ngIf="!isValid">Invalid IP Address or Domain. Please make sure it's right</p>
