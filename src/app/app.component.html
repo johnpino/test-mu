@@ -1,7 +1,10 @@
 <div class="ip-tracker">
     <div class="ip-tracker__header">
-        <app-ip-input></app-ip-input>
-        <app-info-display></app-info-display>
+        <div class="ip-tracker__container">
+            <h1 class="ip-tracker__title">{{title}}</h1>
+            <div app-ip-input></div>
+            <div app-info-display></div>
+        </div>
     </div>
     <div class="ip-tracker__body">
         <app-map></app-map>

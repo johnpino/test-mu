@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { latLng, tileLayer, marker } from 'leaflet';
+import { latLng, tileLayer, marker, icon } from 'leaflet';
 import { IpDataService } from 'src/app/services/ip-data.service';
 
 @Component({
@@ -10,7 +10,16 @@ import { IpDataService } from 'src/app/services/ip-data.service';
 export class MapComponent implements OnInit {
 
   center = latLng([ 49.879966, -121.726909 ]);
-  layer = marker([ 46.879966, -121.726909 ]);
+
+  icon = {
+    icon: icon({
+      iconSize: [ 46, 55 ],
+      iconAnchor: [ 23, 55 ],
+      iconUrl: 'assets/img/icon-location.svg'
+    })
+  };
+
+  layer = marker([ 46.879966, -121.726909 ], this.icon);
 
   options = {
     layers: [
@@ -18,7 +27,7 @@ export class MapComponent implements OnInit {
         attribution: '&copy; OpenStreetMap contributors'
       })
     ],
-    zoom: 12,
+    zoom: 17,
     center: this.center
   };
 
@@ -28,7 +37,7 @@ export class MapComponent implements OnInit {
     this.ipDataService.results
       .subscribe( ipData => {
         this.center = latLng(ipData.latLng);
-        this.layer = marker(ipData.latLng);
+        this.layer = marker(ipData.latLng, this.icon);
       });
   }
 

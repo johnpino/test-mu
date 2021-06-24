@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { IpDataService } from 'src/app/services/ip-data.service';
 
 @Component({
-  selector: 'app-ip-input',
+  selector: '[app-ip-input]',
   templateUrl: './ip-input.component.html',
   styleUrls: ['./ip-input.component.scss']
 })
 export class IpInputComponent implements OnInit {
+
+  placeholder = "Search for any IP address or domain";
 
   searchItem: string;
   searchType: string;

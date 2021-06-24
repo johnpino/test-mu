@@ -1,0 +1,23 @@
+.ip-tracker {
+    &__header {
+        background-image: url('/assets/img/pattern-bg.png');
+        background-size: cover;
+        background-position: center center;
+        padding-top: 2rem;
+        max-height: 205px;
+        overflow: visible;
+        position: relative;
+        z-index: 401;
+    }
+
+    &__container {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title {
+        text-align: center;
+        margin-top: 0;
+    }
+}

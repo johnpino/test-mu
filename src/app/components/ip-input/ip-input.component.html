@@ -1,8 +1,12 @@
-<input 
-    type="text" 
-    value="" 
-    [(ngModel)]="searchItem"
+<div class="input-group">
+    <input
+        type="text"
+        [placeholder]="placeholder"
+        value=""
+        [(ngModel)]="searchItem"
     />
-<button type="button" (click)="validateData()">Testing</button>
-<h2>{{ searchItem }}</h2>
+    <button type="button"(click)="validateData()">
+        <img src="/assets/img/icon-arrow.svg" />
+    </button>
+</div>
 <p *ngIf="!isValid">Invalid IP Address or Domain. Please make sure it's right</p>
