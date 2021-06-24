@@ -1,6 +1,11 @@
 @import "../assets/SCSS/mixins/breakpoints";
 
 .ip-tracker {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    
     &__header {
         background-image: url('/assets/img/pattern-bg.png');
         background-size: cover;
