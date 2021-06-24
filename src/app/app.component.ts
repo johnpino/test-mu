@@ -14,10 +14,6 @@ export class AppComponent implements OnInit  {
   constructor(private http: HttpClient, private ipDataService: IpDataService){ }
 
   ngOnInit(): void {
-    this.http.get("http://api.ipify.org/?format=json")
-      .subscribe((res:any)=>{
-        this.ipDataService.searchIp(res.ip);
-      });
-    
+    this.ipDataService.getMyIp();
   }
 }

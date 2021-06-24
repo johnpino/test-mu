@@ -18,6 +18,13 @@ export class IpDataService {
     this.loading = false;
   }
 
+  getMyIp(){
+    this.http.get("http://api.ipify.org/?format=json")
+      .subscribe((res:any)=>{
+        this.searchIp(res.ip);
+      });
+  }
+
   searchIp(ip: string, type: string = this.searchType) {
     let promise = new Promise((resolve, reject) => {
       let apiURL = `${this.apiRoot}?apiKey=${this.apiKey}&${type}=${ip}`;
