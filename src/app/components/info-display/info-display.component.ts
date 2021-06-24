@@ -36,7 +36,7 @@ export class InfoDisplayComponent implements OnInit {
       .subscribe( ipData => {
         this.ipAddress = ipData.ip;
         this.location = ipData.location;
-        this.timezone = ipData.timezone;
+        this.timezone = "UTC " + ipData.timezone;
         this.isp = ipData.isp;
       });
   }

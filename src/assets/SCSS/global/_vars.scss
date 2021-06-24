@@ -1,0 +1,46 @@
+//**Variables**//
+
+//Color
+
+$black: #000;
+$white: #fff;
+$blue: #00a7ff;
+$gray: #ccc;
+$gray-soft: #f2f2f2;
+
+//Breakpoints
+
+$media-query-mobile: 37.5em;
+$media-query-phablet: 37.5em;
+$media-query-tablet: 50em;
+$media-query-laptop: 64em;
+$media-query-desktop: 70em;
+
+//Gaps
+
+$gap: 1.5rem;
+$gap-xs: $gap/2;
+$gap-md: $gap*2;
+
+//Fonts
+
+$p-font-size: 1rem;
+$h1-font-size: 2.5rem;
+$h2-font-size: $h1-font-size*0.5;
+$h3-font-size: $h2-font-size*0.85;
+$label-font-size: $p-font-size*0.9;
+$label-hover-font-size: $label-font-size*0.9;
+$footer-font-size: $p-font-size*0.7;
+
+//Layout
+
+$logo-max-width: 100px;
+$content-max-width: 1080px;
+
+//Forms
+
+$input-height: 50px;
+
+//Footer
+
+$footer-decoration-height: 80px;
