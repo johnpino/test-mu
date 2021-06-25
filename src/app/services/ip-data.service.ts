@@ -19,7 +19,7 @@ export class IpDataService {
   }
 
   getMyIp(){
-    this.http.get("http://api.ipify.org/?format=json")
+    this.http.get("https://api.ipify.org/?format=json")
       .subscribe((res:any)=>{
         this.searchIp(res.ip);
       });
